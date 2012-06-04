@@ -1,0 +1,45 @@
+/*=================== Required styles ====================*/
+.accordion-slider{				position:relative; width:956px; height:400px; color:#FFF; border-radius:25px; overflow:hidden; clear:both;	}
+.accordion-slider ul{			position:relative; list-style:none; margin:0 0 0 136px; padding:0;	}
+.accordion-slider li{				width:240px; height:400px; clear:both; overflow:hidden; cursor:pointer;	}
+.accordion-slider li + li{			border-left:5px solid #FFF;	}
+.accordion-slider li.active{		cursor:default;	}
+.accordion-slider li.active ~ li{	margin-left:537px;	}
+
+.accordion-slider li .shade{	position:absolute; width:100%; height:100%; left:0; top:0; background-color:#222;
+							-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{70})";
+							filter: alpha(opacity=70);
+							-webkit-opacity: 0.7;
+							 -khtml-opacity: 0.7;
+							   -moz-opacity: 0.7;
+							        opacity: 0.7;
+}
+
+.content-inner{		display:none; position:relative; padding:20px 30px 20px; height:360px; overflow:hidden;		}
+.accordion-slider li.active .content-inner{	display:block;	}
+/*========================================================*/
+
+
+
+
+/*==================== Example styles ====================*/
+body{				font:normal 13px/17px Helvetica, Arial, sans-serif; margin:0; padding:0; 	}
+h1{					font-size:26px; line-height:32px; font-weight:normal; margin:0;	}
+.container{			width:970px; margin:0 auto; padding:0;	}
+
+.text{	position:absolute; left:0; bottom:0; width:90%; padding:20px 5%; background:#222; background:rgba(30, 30, 30, 0.7); 	}
+
+.bg1{	background:url('../images/bg_1.jpg') no-repeat right top;	}
+.bg2{	background:url('../images/bg_2.jpg') no-repeat right top;	}
+.bg3{	background:url('../images/bg_3.jpg') no-repeat right top;	}
+.bg4{	background:url('../images/bg_4.jpg') no-repeat right top;	}
+.bg5{	background:url('../images/bg_5.jpg') no-repeat right top;	}
+.bg6{	background:url('../images/bg_6.jpg') no-repeat right top;	}
+.bg7{	background:url('../images/bg_7.jpg') no-repeat right top;	}
+
+
+.sample-pagination{	list-style:none; margin:0; padding:0; overflow:hidden; background:#DDD; width:90%; margin:0 auto;	}
+.sample-pagination li{	float:left;	}
+.sample-pagination a{	text-decoration:none; display:block; padding:5px; width:30px; height:30px; line-height:30px; font-size:30px; text-align:center; color:#222; 	}
+.sample-pagination a:hover{	background:#FFF;	}
+/*========================================================*/
