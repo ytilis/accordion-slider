@@ -1,8 +1,9 @@
-<h2>jQuery Accordion-Slider</h2>
+jQuery Accordion-Slider
+-------
 
 A simple slideshow in a style that mimics an accordion.
 
-<h3><a href='http://ytilis.com/projects/accordion-slider/'>Demo</a></h3>
+### [Demo] (http://ytilis.com/projects/accordion-slider/)
 
 First draft by Yury Tilis, with help from Matt Lein.
 
