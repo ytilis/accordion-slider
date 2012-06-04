@@ -147,11 +147,19 @@
 				$this.siblings().removeClass( settings.activeClass );
                 $this.addClass( settings.activeClass );
 
+				parentShift = -( ( $this.index() - 1 ) * settings.collapsedVisible ) - 5;
+				
+				if( $this.index() == 0 ){
+					parentShift = 0;
+				} else if( $this.index() == ($lis.length - 1) ){ 
+					parentShift += settings.collapsedVisible;
+				}
+				
                 $this.stop().animate({
                     width : settings.openWidth, marginLeft : 0
                 }, { duration: settings.speed, queue: false })
 					.parent().stop().animate({
-						marginLeft : -( ( $this.index() - 1 ) * settings.collapsedVisible ) - 5
+						marginLeft : parentShift
 					}, { duration: settings.speed, queue: false }).end()
 					.nextAll().stop().animate({
 						width : settings.closedWidth, marginLeft : settings.openWidth - settings.collapsedVisible
