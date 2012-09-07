@@ -2,12 +2,31 @@
 <html>
   <head>
     <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+	
+	<link rel="stylesheet" type="text/css" href="demo_files/css/style.css" />
 
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="demo_files/js/jquery.accordionSlider.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var slider = $('.accordion-slider').accordionSlider();
+
+			$('.sample-pagination a').click(function(e){
+				var target = '#as_' + $(this).attr('href').substr(1);
+				var idx = $(target).siblings().andSelf().index( $(target) );
+				
+				$('.accordion-slider').accordionSlider( idx );
+
+				e.preventDefault();
+			});
+		});
+	</script>
+	
     <title>Accordion-slider by ytilis</title>
   </head>
 
@@ -30,13 +49,68 @@
       <section id="main_content">
         <h2>jQuery Accordion-Slider</h2>
 
-<p>A simple slideshow in a style that mimics an accordion.</p>
+		<p>A simple slideshow in a style that mimics an accordion.</p>
 
-<h3><a href="http://ytilis.com/projects/accordion-slider/">Demo</a></h3>
+		<div class='container'>
+			<div class='accordion-slider'>
+				<ul><li class='bg1' id='slide1'>
+						<div class="content-inner"><div class="text">
+							<h1>Slide 1</h1>
+						</div></div>
+					</li>
 
-<p>First draft by Yury Tilis, with help from Matt Lein.</p>
+					<li class='bg2' id='slide2'>
+						<div class="content-inner"><div class="text">
+							<h1>Slide 2</h1>
+						</div></div>
+					</li>
 
-<p>Placeholder images shamelessly grabbed from placekitten.com</p>
+					<li class='bg3' id='slide3'>
+						<div class="content-inner"><div class="text">
+							<h1>Slide 3</h1>
+						</div></div>
+					</li>
+
+					<li class='bg4' id='slide4'>
+						<div class="content-inner"><div class="text">
+							<h1>Slide 4</h1>
+						</div></div>
+					</li>
+
+					<li class='bg5' id='slide5'>
+						<div class="content-inner"><div class="text">
+							<h1>Slide 5</h1>
+						</div></div>
+					</li>
+
+					<li class='bg6' id='slide6'>
+						<div class="content-inner"><div class="text">
+							<h1>Slide 6</h1>
+						</div></div>
+					</li>
+					
+					<li class='bg7' id='slide7'>
+						<div class="content-inner"><div class="text">
+							<h1>Slide 7</h1>
+						</div></div>
+					</li>
+				</ul>
+			</div>
+			
+			<ul class='sample-pagination'>
+				<li><a href='#slide1'>1</a></li>
+				<li><a href='#slide2'>2</a></li>
+				<li><a href='#slide3'>3</a></li>
+				<li><a href='#slide4'>4</a></li>
+				<li><a href='#slide5'>5</a></li>
+				<li><a href='#slide6'>6</a></li>
+				<li><a href='#slide7'>7</a></li>
+			</ul>
+		</div>
+
+		<p>First draft by Yury Tilis, with help from Matt Lein.</p>
+
+		<p>Placeholder images shamelessly grabbed from placekitten.com</p>
       </section>
     </div>
 
